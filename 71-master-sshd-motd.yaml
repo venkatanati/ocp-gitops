@@ -1,1 +1,24 @@
-
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  annotations:
+  labels:
+    machineconfiguration.openshift.io/role: master
+  name: 71-master-sshd-motd
+spec:
+  baseOSExtensionsContainerImage: ""
+  config:
+    ignition:
+      version: 3.4.0
+    storage:
+      files:
+      - contents:
+          compression: ""
+          source: data:text/plain;charset=utf-8;base64,SSBMb3ZlIE9wZW5zaGlmdAo=
+        mode: 292
+        overwrite: true
+        path: /etc/motd
+  fips: false
+  kernelArguments: null
+  kernelType: ""
+  osImageURL: ""
