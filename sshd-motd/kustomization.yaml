@@ -7,5 +7,3 @@ resources:
   - cli-job-sa.yaml
   - cli-job-sa-role.yaml
   - cli-job-sa-rolebinding.yaml
-  - 71-master-sshd-motd.yaml
-  - 71-worker-sshd-motd.yaml
